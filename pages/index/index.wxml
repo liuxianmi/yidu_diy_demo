@@ -1,0 +1,1 @@
+<index diyId="{{diyconfig.diy_id}}" diyKey="{{diyconfig.diy_key}}" pageId="{{diyconfig.page_id}}" bind:page_url="page_url" PullDown="{{PullDown}}"/>
