@@ -1,7 +1,25 @@
+var plugin = requirePlugin("myPlugin");
+var diyconfig=require("diyconfig.js");
 module.exports = {
-  //跳转
+  //diy专用跳转
+  onPageUrl:function(e){
+    var data = plugin.menu_url(e.detail.data);
+    diyconfig.showComponentTitle && data.showword && plugin.ydshow(data.showword); //点击组件弹框显示组件名称，不用时隐藏
+    if(data && data['type']=='app'){//小程序跳转
+      wx.navigateToMiniProgram({
+        appId: data['appid'],
+        path: data['path'],
+        extraData: {
+          foo: 'bar'
+        },
+        envVersion: 'release'
+      })
+    }else{//页面跳转
+      data['url'] && this.jump(data['url']);
+    }
+  },
+  //封装跳转
   jump: function (url, i) {
-    console.log(url);
     (!i || i == '') ? i = 1 : i = i;
     if (i == 1) {
       wx.navigateTo({
@@ -35,19 +53,33 @@ module.exports = {
       wx.navigateBack()
     }
   },
+  //重写页面标题
   ReName: function (e) {
     wx.setNavigationBarTitle({
       title: e ? e : ''
     })
   },
-  setting: function (page) {
+  //页面基础设置赋值
+  setInitPage: function () {
+    this.ReName(this.page.name);
     wx.setNavigationBarColor({
-      frontColor: page.text_color,
-      backgroundColor: page.nv_color,
+      frontColor: this.page.text_color,
+      backgroundColor: this.page.nv_color,
       animation: {
         duration: 0,
         timingFunc: "easeIn"
       }
     });
+    if (wx.setBackgroundColor) {
+      wx.setBackgroundColor({
+        backgroundColor: this.page.bg_color
+      })
+    };
   },
+  page:{ //DIY页面配置默认信息,后台可设置
+    'name':'壹度DIY',//顶部标题
+    'nv_color':'#ffffff',//头部背景
+    'bg_color':'#eeeeee',//窗口背景颜色
+    'text_color':'#000000',//头部文字，仅支持 #ffffff 和 #000000
+  }
 }

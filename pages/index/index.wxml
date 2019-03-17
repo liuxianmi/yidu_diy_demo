@@ -1,1 +1,13 @@
-<index diyId="{{diyconfig.diy_id}}" diyKey="{{diyconfig.diy_key}}" pageId="{{diyconfig.page_id}}" bind:page_url="page_url" PullDown="{{PullDown}}"/>
+<index diyconfig="{{diyconfig}}" pageId="{{page_id}}" scrollTop="{{scrollTop}}" bind:onPageUrl="onPageUrl" bind:getFormId="getFormId" bind:onInitPage="onInitPage" bind:setContactButton="setContactButton" PullDown="{{PullDown}}" />
+
+<navigator style="z-index:9999999999;" hover-class="none" wx:if="{{contactData && contactData.imgurl}}">
+  <view class='suspend_pic' style="bottom:calc({{contactData.form_bottom}}% + 100rpx);right: {{contactData.form_margin}}%;">
+    <view class='kebu_button'>
+      <contact-button type="default-light" size="20" class='user_service' session-from="weapp"></contact-button>
+      <contact-button type="default-light" size="20" class='user_service' session-from="weapp"></contact-button>
+      <contact-button type="default-light" size="20" class='user_service' session-from="weapp"></contact-button>
+      <contact-button type="default-light" size="20" class='user_service' session-from="weapp"></contact-button>
+    </view>
+    <image src='{{contactData.imgurl}}' style='opacity:{{contactData.form_transparent / 100.0}}'></image>
+  </view>
+</navigator>

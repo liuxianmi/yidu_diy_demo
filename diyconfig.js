@@ -1,5 +1,4 @@
 module.exports = {
-  diy_id:'yd1552394681164',//商户ID
-  diy_key:'32eeQw477ijAWC5CH7Gxr2svkqgQ-2y-0I3Y4-3Vaz34Zxr2v8Uh8W9Eo33orkO-uaE',//商户KEY
-  page_id:''//后续扩展用，暂无需配置
-}
+  diy_id:'yd1552807012350',//商户ID
+  diy_key:'3cfd3pBNjxnD8gA5u0Vljg49u1RIXeW07mT-lTKejaO5KfgNCFrZycW8RCXO_Hoh3A',//商户KEY 
+};

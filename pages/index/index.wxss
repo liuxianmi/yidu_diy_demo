@@ -1,1 +1,10 @@
 /* pages/index/index.wxss */
+.suspend_pic{z-index: 999;width: 50px;height: 50px;position: fixed;}
+.suspend_pic image{width: 50px;height: 50px}
+.kebu_button {position:absolute;top:0;left:0m;width:100%;height:100%;overflow:hidden;
+filter:alpha(Opacity=0);-moz-opacity:0;opacity:0;}
+.user_service {float:left;}
+
+/* page{
+  background: black;
+} */
