@@ -23,9 +23,7 @@
 ### 4.小程序开发-页面调用
       ![https://github.com/liuxianmi/yidu_diy_demo.git]使用详情参考示例
 ### 5.后台内容管理
-        (1).在www.cici8.com注册用户，即可使用壹度diy插件
-        演示账号yidu_diy 密码123456
-        (2).需要在微擎应用市场下载小程序插件--【壹度diy插件】
+        需要在微擎应用市场下载小程序插件--【壹度diy插件】
             演示地址 https://card.arliki.com  账号：yidu_diy 密码：yidu_diy
 ## 插件优势
 ### 1.开发者可由该插件 低成本、高效率地开发出diy型小程序页面
