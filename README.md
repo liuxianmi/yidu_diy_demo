@@ -24,7 +24,7 @@
       ![https://github.com/liuxianmi/yidu_diy_demo.git]使用详情参考示例
 ### 5.后台内容管理
         需要在微擎应用市场下载小程序插件--【壹度diy插件】
-            演示地址 https://card.arliki.com  账号：yidu_diy 密码：yidu_diy
+            演示地址 https://we7.arliki.com  账号：yidu_diy 密码：123456
 ## 插件优势
 ### 1.开发者可由该插件 低成本、高效率地开发出diy型小程序页面
 ### 2.页面内容高效率添加，含大量模板库，操作简单，灵活拖拽
